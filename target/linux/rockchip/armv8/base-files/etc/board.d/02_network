@@ -31,6 +31,9 @@ rockchip_setup_interfaces()
 	seewo,sv21-rk3568)
 		ucidef_set_interfaces_lan_wan 'eth0' 'eth1'
 		;;
+	oshwhub,tspi)
+		ucidef_set_interfaces_lan_wan 'eth0' 'eth1'
+		;;
 	hinlink,opc-h68k|\
 	fastrhino,r68s|\
 	lyt,t68m)

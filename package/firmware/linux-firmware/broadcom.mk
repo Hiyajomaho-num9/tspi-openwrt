@@ -70,6 +70,9 @@ define Package/brcmfmac-nvram-43430-sdio/install
 		$(1)/lib/firmware/brcm/brcmfmac43430-sdio.friendlyarm,nanopi-r1.txt
 	$(LN) \
 		brcmfmac43430-sdio.AP6212.txt \
+		$(1)/lib/firmware/brcm/brcmfmac43430-sdio.oshwhub,tspi.txt
+	$(LN) \
+		brcmfmac43430-sdio.AP6212.txt \
 		$(1)/lib/firmware/brcm/brcmfmac43430-sdio.starfive,visionfive-v1.txt
 	$(LN) \
 		brcmfmac43430-sdio.AP6212.txt \

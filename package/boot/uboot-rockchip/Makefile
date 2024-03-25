@@ -192,6 +192,17 @@ define U-Boot/panther-x2-rk3566
   DDR:=rk3566_ddr_1056MHz_v1.18.bin
 endef
 
+define U-Boot/oshwhub-tspi-rk3566
+  BUILD_SUBTARGET:=armv8
+  NAME:=Oshwhub Tspi
+  BUILD_DEVICES:= \
+    oshwhub_tspi
+  DEPENDS:=+PACKAGE_u-boot-oshwhub-tspi-rk3566:arm-trusted-firmware-rk3566
+  PKG_BUILD_DEPENDS:=arm-trusted-firmware-rockchip-vendor
+  ATF:=rk3568_bl31_v1.43.elf
+  DDR:=rk3566_ddr_1056MHz_v1.18.bin
+endef
+
 # RK3568 boards
 
 define U-Boot/lyt-t68m-rk3568
@@ -320,6 +331,7 @@ UBOOT_TARGETS := \
   seewo-sv21-rk3568 \
   station-p2-rk3568 \
   panther-x2-rk3566 \
+  oshwhub-tspi-rk3566 \
   sharevdi-h3399pc-rk3399 \
   guangmiao-g4c-rk3399 \
   nanopi-r4s-rk3399 \

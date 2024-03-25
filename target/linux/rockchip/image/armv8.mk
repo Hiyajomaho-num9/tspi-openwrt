@@ -200,6 +200,16 @@ define Device/panther_x2
 endef
 TARGET_DEVICES += panther_x2
 
+define Device/oshwhub_tspi
+  DEVICE_VENDOR := Oshwhub
+  DEVICE_MODEL := Tspi
+  DEVICE_DTS := rockchip/rk3566-oshwhub-tspi
+  UBOOT_DEVICE_NAME := oshwhub-tspi-rk3566
+  IMAGE/sysupgrade.img.gz := boot-common | boot-script nanopi-r5s | pine64-img | gzip | append-metadata
+  DEVICE_PACKAGES := kmod-brcmfmac brcmfmac-firmware-43430a0-sdio kmod-ikconfig oshwhub_tspi-firmware wpad-openssl
+endef
+TARGET_DEVICES += oshwhub_tspi
+
 define Device/pine64_rockpro64
   DEVICE_VENDOR := Pine64
   DEVICE_MODEL := RockPro64
